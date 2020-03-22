@@ -1,26 +1,78 @@
-/*
- * Part of the Assignment for course CS213 Object Oriented Programming.
- * IoC KUST
- * Spring 2020
- */
+public class Paper
+	{
+			private String Papertitle;
+			private String Paperid;
+			private String Exametype;
+			private String Invigilator;
+			private String Location;
+			private boolean isCollected;
+			private int Numberofstudents;
+			
+				
+	Paper(String Papertitle,String Paperid,String Exametype,String Invigilator,
+		String Location,boolean isCollected,int Numberofstudents)
+			{
+				this.Papertitle=Papertitle;
+				this.Paperid=Paperid;
+				this.Exametype=Exametype;
+				this.Invigilator=Invigilator;
+				this.Location=Location;
+				this.isCollected=isCollected;
+				this.Numberofstudents=Numberofstudents;
+				
+			}
+			public String getPT()
+				{
+					return Papertitle;
+				}
+			
+			public String getPI()
+				{
+					return Paperid;
+				}
+			
+			
+			public String getET()
+				{
+					return Exametype;
+				}
 
-package ems;
+			public String getInv()
+				{
+					return Invigilator;
+				}
 
+			public String getLoc()
+				{
+					return Location;
+				}
 
-public class Paper {
-    private int paperID;
-    private String courseName;
-    private String courseIncharge;
-    private String semester;
-    private String program;
-    private Date date;
-    private Time time;
-    
-    private String examType;
-    private static final double maxMarks = 100;
-    
-    private String location;
-    private String invigilator;
-    private int numberOfStudents;
-    private boolean isCollected;
-}
+			public void setIsCollected(boolean x)
+				{
+					isCollected=x;
+				}
+
+			public boolean getIsCollected()
+				{
+					return isCollected;
+				}
+
+			public int getNoS()
+				{
+					return Numberofstudents;
+				}
+
+			public String toString()
+			
+				{
+					return "Paper Titel:\t"+ Papertitle 
+					+ "\nPaper ID:\t"+ Paperid 
+					+ "\nExam Type:\t" + Exametype 
+					+ "\nInvigilator:\t" + Invigilator 
+					+ "\nPaper Location:\t" +Location 
+					+ "\nPaper Collected:\t" + isCollected
+					+ "\nNumber of Students:\t" + Numberofstudents; 
+				}
+				
+		 	
+	}
